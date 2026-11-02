@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#164b40">
+<title>Каменная нега — салон красоты для камней</title>
+<style>
+:root{--forest:#164b40;--deep:#0d332d;--mint:#9ab59a;--cream:#f0dfbd;--sand:#d4b48a;--ink:#f8f1e4}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif;background:var(--deep)}
+.page{overflow:hidden;position:relative;background:radial-gradient(ellipse at 10% 20%,#729a7133,transparent 35%),radial-gradient(ellipse at 90% 65%,#b68c5a22,transparent 32%),linear-gradient(135deg,#1b5a4b,#103d34 55%,#0b302a)}
+.wrap{width:min(1120px,calc(100% - 40px));margin:auto;position:relative;z-index:1}
+header{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff25}
+.brand{display:flex;align-items:center;gap:11px;font-weight:750}.mark{display:grid;place-items:center;width:38px;height:38px;border-radius:13px;background:linear-gradient(140deg,#c9d4a5,#789c7d);color:#164b40;font-size:22px}
+nav{display:flex;gap:28px;font-size:14px;color:#d2dfd0}a{color:inherit;text-decoration:none}nav a:hover{color:var(--cream)}
+.pill,.button{display:inline-block;border:0;border-radius:99px;padding:12px 21px;background:linear-gradient(135deg,#f0d9ad,#cda77b);color:#40382b;font-weight:750;cursor:pointer}
+.menu{display:none;background:transparent;border:1px solid #ffffff55;color:white;padding:8px 12px;border-radius:12px}
+.hero{min-height:535px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:25px;padding:55px 0 70px}
+.kicker{color:#e7d1a6;text-transform:uppercase;letter-spacing:.17em;font-size:11px;font-weight:800}
+h1,h2,h3{font-family:Georgia,serif;font-weight:500;line-height:1.04}h1{font-size:clamp(48px,6.5vw,78px);letter-spacing:-.045em;margin:19px 0}h1 em{color:#d9c59d}
+.copy{max-width:500px;color:#d0ddcf;font-size:17px}.actions{display:flex;align-items:center;gap:22px;margin-top:28px;flex-wrap:wrap}.under{font-size:14px;color:#ead8b9;border-bottom:1px solid #ead8b966;padding-bottom:4px}
+.note{margin-top:32px;color:#b9cbbd;font-size:12px}.art{height:390px;display:grid;place-items:center;position:relative}
+.stone{width:min(350px,80%);aspect-ratio:1;border-radius:48% 52% 43% 57%/48% 43% 57% 52%;background:radial-gradient(circle at 30% 23%,#d8c8a2 0 3%,#a69a7a 16%,#666451 42%,#35443a 70%,#152e28 100%);box-shadow:inset -25px -30px 50px #081c18aa,inset 14px 15px 25px #f4e7c344,0 38px 65px #061e1a99;transform:rotate(-13deg);position:relative}
+.stone:after{content:"";position:absolute;inset:16% 25% auto;width:33%;height:18%;border-radius:50%;background:#eee0bd66;filter:blur(14px)}
+.tag{position:absolute;right:0;bottom:24px;background:#174d41eF;border:1px solid #ffffff35;border-radius:17px;padding:13px 18px;box-shadow:0 18px 40px #061f1a77;font-size:12px}.tag strong{display:block;font:21px Georgia;color:var(--cream)}
+.spark{position:absolute;color:var(--cream);font-size:25px}.s1{top:30px;left:15%}.s2{right:10%;top:60px}
+.benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;background:#154b40eF;border:1px solid #ffffff26;border-radius:26px;padding:28px 20px;margin:0 0 95px;box-shadow:0 22px 55px #061d1980}
+.benefit{text-align:center;padding:5px}.ico{width:46px;height:46px;border:1px solid #d5c49a88;border-radius:50%;display:grid;place-items:center;margin:0 auto 12px;color:var(--cream);font-size:21px}
+.benefit h3{font-size:18px;margin:0 0 5px}.benefit p{font-size:12px;color:#b9cdbd;margin:0}
+section{padding-bottom:100px}.head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:30px}.head h2{font-size:clamp(36px,4.5vw,54px);margin:10px 0 0}.head p{max-width:350px;color:#bdcdbd;font-size:14px;margin:0}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.service{border-radius:24px;padding:25px;min-height:325px;display:flex;flex-direction:column;box-shadow:0 20px 45px #071e1a55;transition:.2s transform}
+.service:hover{transform:translateY(-5px)}.service:nth-child(1){background:linear-gradient(145deg,#8ca77e,#456b50)}.service:nth-child(2){background:linear-gradient(145deg,#a87555,#694632)}.service:nth-child(3){background:linear-gradient(145deg,#d1b17e,#886344)}
+.top{display:flex;justify-content:space-between;align-items:center}.icon{width:51px;height:51px;border-radius:17px;background:#ffffff22;display:grid;place-items:center;font-size:25px;border:1px solid #ffffff35}.num{font-size:11px;letter-spacing:.13em;color:#ffffffbd}
+.service h3{font-size:28px;margin:30px 0 8px}.service p{font-size:14px;color:#fffde0d9;margin:0 0 22px}.bottom{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:10px}.price{font:30px Georgia;white-space:nowrap}.choose{border:1px solid #ffffffa0;background:#ffffff18;color:white;border-radius:99px;padding:9px 13px;cursor:pointer;font-size:12px}.choose:hover{background:#ffffff35}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center;background:#e8dec6;color:#24463a;border-radius:28px;padding:38px;margin-bottom:90px}
+.about-art{min-height:250px;border-radius:20px;background:radial-gradient(circle at 50% 42%,#d8c7a0,#9a9e78 48%,#597760);display:grid;place-items:center;position:relative;overflow:hidden}
+.mini-stone{width:145px;height:105px;border-radius:50% 43% 48% 42%;background:radial-gradient(circle at 30% 20%,#e3d5b6,#8e8974 45%,#414a3c 90%);box-shadow:inset -12px -13px 24px #1d302c77,0 25px 28px #172e2744;transform:rotate(-17deg)}
+.about h2{font-size:clamp(34px,4vw,48px);margin:12px 0}.about p{color:#536c5b}.about .kicker{color:#8b704b}
+footer{border-top:1px solid #ffffff25;padding:27px 0 35px;display:flex;justify-content:space-between;gap:20px;color:#b9cbbd;font-size:12px}footer strong{font:19px Georgia;color:#ead7b5}
+.toast{position:fixed;z-index:5;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#f0e2c8;color:#234439;padding:13px 18px;border-radius:30px;box-shadow:0 15px 35px #0005;font-size:13px;max-width:calc(100% - 30px);text-align:center;transition:.2s}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:780px){.hero{grid-template-columns:1fr;padding:35px 0 50px;gap:0}.art{grid-row:1;height:300px}.hero-copy{grid-row:2}.stone{width:250px}.tag{right:4%;bottom:0}.benefits{grid-template-columns:repeat(2,1fr);margin-bottom:75px}.services{grid-template-columns:1fr}.service{min-height:260px}.about{grid-template-columns:1fr;padding:24px;gap:23px}.head{display:block}.head p{margin-top:16px}}
+@media(max-width:560px){.wrap{width:calc(100% - 30px)}header{height:68px}.menu{display:block}.pill{display:none}nav{display:none;position:absolute;top:68px;left:0;right:0;background:#123f36;padding:18px;border-radius:0 0 16px 16px;z-index:3;flex-direction:column}nav.open{display:flex}h1{font-size:53px}.copy{font-size:15px}.art{height:255px}.stone{width:220px}.benefits{padding:20px 10px;gap:18px 5px}.benefit h3{font-size:16px}.benefit p{font-size:11px}section{padding-bottom:72px}.service{padding:22px;min-height:255px}.about-art{min-height:205px}footer{flex-direction:column}}
+</style></head>
+<body><div class="page"><div class="wrap">
+<header><a class="brand" href="#top"><span class="mark">✧</span>Каменная нега</a>
+<nav id="nav"><a href="#services">Услуги</a><a href="#about">О салоне</a><a href="#contacts">Контакты</a></nav>
+<a class="pill" href="#services">Выбрать уход</a><button class="menu" id="menu" aria-expanded="false">Меню</button></header>
+<main id="top"><section class="hero"><div class="hero-copy"><div class="kicker">Спа-пространство для минералов</div><h1>Даже камню<br>нужна <em>нежность.</em></h1><p class="copy">Место, где каждый булыжник почувствует себя драгоценностью. Бережно очищаем, аккуратно расчёсываем и возвращаем природное сияние.</p><div class="actions"><a class="button" href="#services">Подобрать ритуал</a><a class="under" href="#about">Узнать о салоне ↗</a></div><div class="note">✦ Нежный уход. Никакой лишней полировки.</div></div>
+<div class="art" aria-label="Художественная иллюстрация камня"><span class="spark s1">✦</span><span class="spark s2">✧</span><div class="stone"></div><div class="tag"><strong>100% заботы</strong>для каждого минерала</div></div></section>
+<div class="benefits"><div class="benefit"><div class="ico">◉</div><h3>Бережное мытьё</h3><p>Без суеты и грубых щёток</p></div><div class="benefit"><div class="ico">♧</div><h3>Мягкий подход</h3><p>Учитываем характер камня</p></div><div class="benefit"><div class="ico">✧</div><h3>Природный блеск</h3><p>Подчёркиваем естественную красоту</p></div><div class="benefit"><div class="ico">⌁</div><h3>Полный релакс</h3><p>Камень отдыхает — мы заботимся</p></div></div>
+<section id="services"><div class="head"><div><div class="kicker">Меню заботы</div><h2>Выберите свой<br>ритуал ухода</h2></div><p>От лёгкого освежения до комплексного спа-дня. Для маленьких минералов и внушительных булыжников.</p></div>
+<div class="services">
+<article class="service"><div class="top"><div class="icon">💧</div><span class="num">01 / ОЧИЩЕНИЕ</span></div><h3>Помыть камень</h3><p>Деликатное очищение от пыли, следов прогулок и жизненных обстоятельств. Камень снова чист и доволен.</p><div class="bottom"><span class="price">490 ₽</span><button class="choose" data-service="Помыть камень — 490 ₽">Выбрать ↗</button></div></article>
+<article class="service"><div class="top"><div class="icon">🪮</div><span class="num">02 / УКЛАДКА</span></div><h3>Расчесать камень</h3><p>Аккуратно распутаем мох, водоросли и прочие природные недоразумения. Ни одного лишнего скола!</p><div class="bottom"><span class="price">350 ₽</span><button class="choose" data-service="Расчесать камень — 350 ₽">Выбрать ↗</button></div></article>
+<article class="service"><div class="top"><div class="icon">🌿</div><span class="num">03 / ПРЕОБРАЖЕНИЕ</span></div><h3>Комплекс</h3><p>Полный день заботы: очищение, расчёсывание, бережный уход и торжественное возвращение камня в мир.</p><div class="bottom"><span class="price">790 ₽</span><button class="choose" data-service="Комплекс — 790 ₽">Выбрать ↗</button></div></article>
+</div></section>
+<section id="about"><div class="about"><div class="about-art"><div class="mini-stone"></div></div><div><div class="kicker">Философия салона</div><h2>У каждого камня<br>свой характер.</h2><p>Мы верим, что красота не требует спешки. Поэтому создали место, где можно отдохнуть от городской пыли, расправить невидимые минеральные плечи и просто побыть собой.</p><a class="button" href="#services">Найти свой уход</a></div></div></section></main>
+<footer id="contacts"><div><strong>Каменная нега</strong><br>Салон красоты для камней</div><div>Демонстрационный проект для портфолио<br>Цены и услуги вымышлены</div><div>© <span id="year"></span> Каменная нега</div></footer>
+</div></div><div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+const nav=document.getElementById('nav'),menu=document.getElementById('menu');menu.addEventListener('click',()=>{let open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open))});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
+const toast=document.getElementById('toast');let timer;document.querySelectorAll('.choose').forEach(b=>b.addEventListener('click',()=>{toast.textContent='Вы выбрали: '+b.dataset.service+'. Форма записи будет подключена отдельно.';toast.classList.add('show');clearTimeout(timer);timer=setTimeout(()=>toast.classList.remove('show'),3500)}));document.getElementById('year').textContent=new Date().getFullYear();
+</script></body></html>
